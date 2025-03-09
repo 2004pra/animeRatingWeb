@@ -4,10 +4,8 @@
     box-sizing: border-box;
 }
 .first{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 .video1{
     position: absolute;
@@ -18,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 #vid{
     width:100%;
@@ -82,7 +81,7 @@
 }
 .logo h2:nth-child(2){
     -webkit-text-stroke: 2px #00b3ff55;
-    animation: animate 7s ease-in-out infinite;
+    animation: animate 4s ease-in-out infinite;
 }
 @keyframes animate{
     0%,100% {
@@ -130,23 +129,131 @@
     border: 2px solid rgba(0, 200, 255, 0.8);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
-    color: white;
+    color: rgb(250, 250, 250);
     font-size: 18px;
     font-weight: bold;
     text-indent: 15px;
     transition: all 0.3s;
     box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
 }
+input::placeholder {
+    color: rgb(252, 252, 252);
+    font-style: italic;
+    font-size: 18px;
+    opacity: 1; /* Ensures full visibility */
+  }
 .user_input:focus {
     outline: none;
     border-color: cyan;
     box-shadow: 0 0 15px cyan;
 }
-.second, .third {
-    background-color: #f1f1f1;
-    height: 800px;
+.second {
+    background-color: #10102d;
+    height: 75vh;
     width: 100%;
+    color: cyan;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
+.third{
+    background-color: #f5f5f5;
+    height: 100vh;
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.second_v1{
+    background-color: rgb(255, 254, 219);
+    width: 100%;
+    height: 8px;
+}
+.scroll-container{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 15px;
+    scroll-behavior: smooth;
+    padding: 5px;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    animation: infinite;
+}
+.anime-card {
+    /* flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden; */
+
+    position: relative;
+    flex: 0 0 auto;
+    width: 300px; /* Fixed width */
+    height: 460px; /* Fixed height */
+    overflow: hidden;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-origin: center; 
+}
+.anime-card:hover {
+    transform: scale(1.1); /* Increases size on hover */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Adds a glowing shadow effect */
+}
+
+
+
+.anime-card img {
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: opacity 0.3s ease-in-out;
+   
+}
+.anime-card:hover img {
+    opacity: 0.8; /* Slight fade effect */
+}
+
+.rank-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.719);
+    color: cyan;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.anime-card:hover img {
+    filter: brightness(0.8);
+}
+.anime-title {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: cyan;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
