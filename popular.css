@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+
+/* Layout */
+.container {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    gap: 20px;
+    
+}
+
+/* Left Side: Anime List */
+.anime-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto; /* Keeps scrolling inside */
+    max-height: 100vh;
+    background: #000;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.anime-list::-webkit-scrollbar {
+    display: none;
+}
+.anime-list::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, red, blue, green, yellow);
+    background-size: 300% 300%;
+    z-index:-10;
+    animation: animeListBorderAnimation 4s linear infinite;
+}
+@keyframes animeListBorderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Anime Cards */
+.anime-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #0000;
+    border-radius: 8px;
+    width: 100%; /* Ensures it stays inside */
+    box-sizing: border-box;
+    color: #33CCFF;
+    text-indent: 50px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+.anime-card:hover {
+    background: #1c1b1ba7;
+}
+.anime-card img {
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Right Side: Anime Details */
+.anime-details {
+    
+    position: relative;
+    width: 60%;
+    background: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    color: #33CCFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Prevents pseudo-element from overflowing */
+}
+.anime-details::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, red, blue, green, yellow);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: borderAnimation 3s infinite linear;
+}
+
+@keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.anime-details h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    visibility: visible;
+}
+
+ #anime-image{
+    width: 200px;
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+     visibility: hidden;
+}
+#std{
+    visibility: hidden;
+}
+#wri{
+    visibility: hidden;
+}
+#syn{
+    visibility: hidden;
+}
+#rat{
+    visibility: hidden;
+}
+.anime-details h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    visibility: visible;
+}
+#anime-boy{
+    top: -4%;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+
+}

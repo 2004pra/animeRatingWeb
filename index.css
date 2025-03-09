@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.html{
+    scroll-behavior: smooth;
+}
 .first{
     height: auto;
     min-height: 100vh;
@@ -49,7 +52,21 @@
     border-radius: 2rem;
     transition: background-color 0.3s;
     white-space: nowrap;
+    
 }
+.nav_row2 a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav_row3 a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav_row1 a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
 .nav_row1:hover, .nav_row2:hover, .nav_row3:hover{
     background-color: #03a9f4;
     color: rgb(255, 255, 255);
@@ -148,7 +165,7 @@ input::placeholder {
     box-shadow: 0 0 15px cyan;
 }
 .second {
-    background-color: #10102d;
+    background-color: #000000;
     height: 75vh;
     width: 100%;
     color: cyan;
@@ -249,7 +266,7 @@ input::placeholder {
     color: cyan;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
+    
     text-overflow: ellipsis;
 }
 
