@@ -32,7 +32,7 @@ async function getQueryParam() {
     if (anime) {
       container.innerHTML = `
         <div class="anime-card">
-          <img src="${anime.images.jpg.image_url}" alt="${anime.title}" />
+          <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}" />
           <div class="anime-details">
             <div class="anime-title">${anime.title}</div>
             <p><strong>Type:</strong> ${anime.type}</p>
