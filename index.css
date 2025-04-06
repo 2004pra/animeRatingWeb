@@ -270,6 +270,74 @@ input::placeholder {
     text-overflow: ellipsis;
 }
 
+.third {
+    background: linear-gradient(180deg, #000000, #0c0c0c);
+    height: auto;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 10;
+    gap: 30px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #d1faff;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgba(0, 255, 255, 0.1);
+    border: 2px solid cyan;
+    color: cyan;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan;
+}
+
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+    .about-section p {
+        font-size: 14px;
+    }
+    .social-icon {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .navbar {

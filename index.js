@@ -69,5 +69,21 @@ document.addEventListener('DOMContentLoaded', function() {
             targetElement.scrollIntoView({ behavior: "smooth" });
         }
     });
+
+    document.getElementById("searchBtn").addEventListener("click", () => {
+        const input = document.getElementById("animeInput").value.trim();
+        if (input) {
+          window.location.href = `search.html?query=${encodeURIComponent(input)}`;
+        }
+      });
+      
+      // Optional: allow "Enter" key press
+      document.getElementById("animeInput").addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          document.getElementById("searchBtn").click();
+        }
+      });
+      
+
 });
 
