@@ -60,7 +60,7 @@ function showAnimeDetails(anime) {
     animeSynopsis.style.visibility = "visible";
     animeWriter.style.visibility = "visible";
     animeH2.style.visibility = "hidden";
-    animeh1.textContent = "Read Thouroughly";
+    animeh1.textContent = "Read Thoroughly";
     
 
 }
